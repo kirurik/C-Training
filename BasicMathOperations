@@ -1,0 +1,43 @@
+// Importa el espacio de nombres System, que contiene clases fundamentales para trabajar con entrada/salida, entre otras.
+using System;
+
+// Define un espacio de nombres para nuestro programa, ayuda a organizar el código y evitar conflictos de nombres.
+namespace BasicMathOperations
+{
+    // Define una clase llamada 'Program'. En C#, el código se organiza en clases.
+    class Program
+    {
+        // Define el método 'Main', el punto de entrada de cualquier aplicación de consola en C#.
+        static void Main(string[] args)
+        {
+            // Imprime un mensaje en la consola pidiendo al usuario que ingrese el primer número.
+            Console.WriteLine("Por favor, ingresa el primer numero de punto flotante: ");
+            // Lee la línea ingresada por el usuario, la convierte a tipo double y la guarda en la variable 'num1'.
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            // Imprime otro mensaje en la consola pidiendo el segundo número.
+            Console.WriteLine("Por favor, ingresa el segundo numero de punto flotante: ");
+            // Lee la siguiente línea ingresada, la convierte a double y la guarda en 'num2'.
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            // Realiza la suma de 'num1' y 'num2', y almacena el resultado en la variable 'suma'.
+            double suma = num1 + num2;
+            // Realiza la resta de 'num1' y 'num2', y almacena el resultado en 'resta'.
+            double resta = num1 - num2;
+            // Multiplica 'num1' por 'num2' y guarda el resultado en 'multiplicacion'.
+            double multiplicacion = num1 * num2;
+            // Divide 'num1' entre 'num2' y guarda el resultado en 'division'.
+            double division = num1 / num2;
+            // Calcula el residuo de la división de 'num1' entre 'num2' y lo guarda en 'residuo'.
+            double residuo = num1 % num2; // El residuo es lo que queda después de dividir num1 entre num2.
+
+            // A continuación, se imprimen los resultados de cada operación en la consola.
+            Console.WriteLine("Suma: " + suma);
+            Console.WriteLine("Resta: " + resta);
+            Console.WriteLine("Multiplicacion: " + multiplicacion);
+            Console.WriteLine("Division: " + division);
+            // Al imprimir el residuo, se incluye un comentario para explicar qué representa.
+            Console.WriteLine("Residuo: " + residuo + " // El residuo es el sobrante de una division no exacta.");
+        }
+    }
+}
