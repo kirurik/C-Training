@@ -1,0 +1,36 @@
+// Incluye el espacio de nombres System para poder utilizar clases comunes, como Console para la entrada/salida de datos.
+using System;
+
+// Define la clase Program, que contiene el punto de entrada del programa.
+class Program
+{
+    // Define el método Main, el punto de entrada de la aplicación de consola.
+    static void Main(string[] args)
+    {
+        // Solicita al usuario que ingrese el precio del producto importado y lo muestra en consola.
+        Console.Write("Ingrese el precio del producto importado: ");
+        // Lee la entrada del usuario, la convierte a tipo double (números decimales) y la almacena en la variable precioProducto.
+        double precioProducto = Convert.ToDouble(Console.ReadLine());
+
+        // Declara la variable incremento para almacenar el valor del incremento basado en el precio del producto.
+        double incremento;
+
+        // Estructura de decisión if para evaluar si el precio del producto es menor a 2500.
+        if (precioProducto < 2500)
+        {
+            // Si el precio es menor a 2500, calcula el incremento del 11% del precio del producto.
+            incremento = precioProducto * 0.11;
+        }
+        else
+        {
+            // Si el precio es mayor o igual a 2500, calcula el incremento del 8% del precio del producto.
+            incremento = precioProducto * 0.08;
+        }
+
+        // Calcula el nuevo precio del producto sumando el precio original y el incremento.
+        double nuevoPrecio = precioProducto + incremento;
+
+        // Muestra el nuevo precio del producto en consola, concatenando el valor de la variable nuevoPrecio.
+        Console.WriteLine("El nuevo precio del producto es: $" + nuevoPrecio);
+    }
+}
