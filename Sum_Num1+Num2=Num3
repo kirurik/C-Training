@@ -1,0 +1,62 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Solicita al usuario que ingrese el primer número y lo asigna a la variable 'a'.
+        Console.Write("Ingrese el primer numero (a): ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        // Solicita al usuario que ingrese el segundo número y lo asigna a la variable 'b'.
+        Console.Write("Ingrese el segundo numero (b): ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        // Solicita al usuario que ingrese el tercer número y lo asigna a la variable 'c'.
+        Console.Write("Ingrese el tercer numero (c): ");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        // Muestra el menú con las opciones disponibles para el usuario.
+        Console.WriteLine("\nSeleccione una opcion:");
+        Console.WriteLine("1. Validar suma");
+        Console.WriteLine("2. Salir");
+
+        // Solicita al usuario que elija una opción del menú y lo asigna a la variable 'opcion'.
+        Console.Write("\nIngrese el numero de su opcion: ");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        // Utiliza la estructura switch para manejar las diferentes opciones del menú.
+        switch (opcion)
+        {
+            case 1: // Opción para validar la suma de los números.
+                // Verifica si la suma de dos números es igual al tercer número.
+                if ((a + b == c) || (a + c == b) || (b + c == a))
+                {
+                    // Si alguna de las sumas coincide con el tercer número, muestra "SON IGUALES".
+                    Console.WriteLine("SON IGUALES");
+                }
+                else
+                {
+                    // Si ninguna suma coincide con el tercer número, muestra "SON DISTINTOS".
+                    Console.WriteLine("SON DISTINTOS");
+                }
+
+                // Muestra un mensaje de despedida antes de terminar la ejecución.
+                Console.WriteLine("Gracias por utilizar el programa. Adios!");
+                break; // Finaliza el caso.
+
+            case 2: // Opción para salir del programa.
+                // Muestra un mensaje de despedida.
+                Console.WriteLine("Gracias por utilizar el programa. Adios!");
+                break; // Finaliza el caso.
+
+            default: // Opción por defecto para manejar entradas no válidas.
+                // Informa al usuario que ha seleccionado una opción no válida.
+                Console.WriteLine("Opcion no valida. Por favor, intente de nuevo.");
+                break; // Finaliza el caso.
+        }
+
+        // Realiza una pausa para que el usuario pueda ver el resultado antes de cerrar el programa.
+        Console.ReadKey();
+    }
+}
